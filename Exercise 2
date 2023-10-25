@@ -1,0 +1,32 @@
+import math
+
+# abstract clas
+class Figure:
+    def __init__(self):
+        self.area = 0
+        self.perimeter = 0
+
+    def calculate_area(self):
+        pass
+
+    def calculate_perimeter(self):
+        pass
+
+#  Square class
+class Square(Figure):
+    def __init__(self, side=1):
+        super().__init__()
+        self.side = side
+
+    def calculate_area(self):
+        self.area = self.side * self.side
+
+    def calculate_perimeter(self):
+        self.perimeter = 4 * self.side
+
+if __name__ == "__main__":
+    square = Square(5)
+    square.calculate_area()
+    square.calculate_perimeter()
+    print("Square Area:", square.area)
+    print("Square Perimeter:", square.perimeter)
